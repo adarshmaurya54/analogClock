@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;900&display=swap');
+
+:root {
+    --clr: #000;
+}
+
+* {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bolder;
+    font-size: 1.1em;
+    color: var(--clr);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.24);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 15px;
+    text-align: center;
+}
+
+.clock span p {
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+.clock::before {
+    content: '';
+    background: #fff;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: -2px 0px 4px 0px black;
+}
+
+.hours i {
+    background-color: #000;
+    height: 50px;
+    transform-origin: bottom;
+
+}
+
+.minutes i {
+    background-color: #000;
+    height: 80px;
+}
+
+.seconds i {
+
+    background-color: rgb(252, 20, 20);
+    height: 110px;
+    width: 2px !important;
+}
+
+.hands {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hands i {
+    border-top-left-radius: 1001% !important;
+    border-top-right-radius: 1001% !important;
+    position: absolute;
+    width: 5px;
+    box-shadow: -2px 0px 4px 0px black;
+}
+
+.seconds span {
+    position: absolute;
+    transform: rotate(calc(6deg * var(--i)));
+    inset: 7px;
+    color: black;
+    font-weight: 100;
+    font-size: 0.2em;
+    text-align: center;
+}
+
+.seconds span p {
+    transform: rotate(calc(-6deg * var(--i)));
+}
+
+.date {
+    z-index: 1;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.today-date,
+.day {
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 0.6em;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.clock img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    /* filter: grayscale(80%); */
+}
+
+.msg {
+    margin-top: 50px;
+    font-size: 1.5em;
+    display: none;
+    text-transform: uppercase;
+    text-align: center;
+    background: -webkit-linear-gradient(140deg,#138808, #fafafa,#FF9933);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.name
+{
+    margin-bottom: 50px;
+    color: black!important;
+}
