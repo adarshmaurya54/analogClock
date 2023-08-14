@@ -17,7 +17,7 @@ function calculateYear(date) { // birthday is a date
     console.log(years);
     return years;
 }
-if(dd === 14 || mm === 8){
+if(dd === 15 && mm === 8){
     let i = 1;
     setInterval(() => {
         bgimage.src = `./images/flag${i}.jpeg`;
