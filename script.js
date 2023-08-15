@@ -23,7 +23,7 @@ if(dd === 15 && mm === 8){
         bgimage.src = `./images/flag${i}.jpeg`;
         root.style.setProperty('--clr', '#000');
         msg.style.display = "block";
-        msg.innerHTML = `happy ${calculateYear(independenceDayDate)}th independence day`;
+        msg.innerHTML = `happy ${calculateYear(independenceDayDate)+1}th independence day`;
         if(i == 4){
             hr.style.backgroundColor = "#000";
             min.style.backgroundColor = "#000";
