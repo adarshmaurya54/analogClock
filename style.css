@@ -74,7 +74,6 @@ body {
     background-color: #000;
     height: 50px;
     transform-origin: bottom;
-
 }
 
 .minutes i {
@@ -83,12 +82,59 @@ body {
 }
 
 .seconds i {
-
     background-color: rgb(252, 20, 20);
-    height: 110px;
+    height: 95px;
     width: 2px !important;
 }
-
+.seconds i::before{
+    content: '';
+    background-color: red;
+    position: absolute;
+    top: -41.5px;
+    height: 3px;
+    width: 3px;
+    box-shadow: -2px 0px 4px 0px black;
+    border-radius: 50%;
+}
+.minutes i::before{
+    content: '';
+    box-shadow: -2px 0px 4px 0px black;
+    background-color: black;
+    position: absolute;
+    top: -20px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+.hours i::before{
+    content: '';
+    box-shadow: -2px 0px 4px 0px black;
+    background-color: black;
+    position: absolute;
+    top: -35px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+.second-circle,.minute-circle,.hour-circle{
+    border: 0.7px solid rgba(0, 0, 0, 0.418);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    z-index: 1;
+}
+.hour-circle{
+    height: 55%;
+    width: 55%;
+}
+.minute-circle{
+    height: 65%;
+    width: 65%;
+}
 .hands {
     z-index: 2;
     position: absolute;
@@ -109,11 +155,12 @@ body {
 .seconds span {
     position: absolute;
     transform: rotate(calc(6deg * var(--i)));
-    inset: 7px;
+    inset: 3px;
     color: black;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 0.2em;
     text-align: center;
+
 }
 
 .seconds span p {
